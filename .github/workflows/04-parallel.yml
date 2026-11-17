@@ -59,7 +59,7 @@ jobs:
           exit 1
       - run: npm run build
         working-directory: app
-        parallel:
+      - parallel:
           - name: lint
             run: npm run lint
           - name: test
