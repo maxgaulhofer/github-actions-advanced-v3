@@ -65,12 +65,12 @@ jobs:
           mkdir "$RUNNER_TEMP/lab02-codeql"
           time tar --zstd -xf "$ARCHIVE" -C "$RUNNER_TEMP/lab02-codeql"
           "$RUNNER_TEMP/lab02-codeql/codeql/codeql" version
-      - name: Complete trusted cache population
-        # TODO: Replace this placeholder with a cache save step.
-        # Save the download directory only after all steps above have succeeded.
-        # Do not save when restore found the exact primary key; save after a
-        # partial match or a miss, using the restore step's primary key output.
-        # Keep the job's main-branch restriction. The PR workflow must not save.
-        run: |
-          echo 'TODO: Save verified CodeQL downloads after a successful smoke test unless the primary key matched exactly.' >&2
-          exit 1
+      # - name: Complete trusted cache population
+      #   # TODO: Replace this placeholder with a cache save step.
+      #   # Save the download directory only after all steps above have succeeded.
+      #   # Do not save when restore found the exact primary key; save after a
+      #   # partial match or a miss, using the restore step's primary key output.
+      #   # Keep the job's main-branch restriction. The PR workflow must not save.
+      #   run: |
+      #     echo 'TODO: Save verified CodeQL downloads after a successful smoke test unless the primary key matched exactly.' >&2
+      #     exit 1
